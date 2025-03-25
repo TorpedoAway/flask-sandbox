@@ -11,4 +11,8 @@ def hello_world():
 
 @app.route("/tempate-creator")
 def CreateTemplate():
-    return render_template("gen.html")
+    links = list()
+    links.append(("www.google.com","Google"))
+    links.append(("www.digitalocean.com","Digital Ocean"))
+    
+    return render_template("gen.html", links=links)
