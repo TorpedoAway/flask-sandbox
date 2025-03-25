@@ -1,0 +1,6 @@
+name: sample-flask
+services:
+- name: web
+  github:
+    repo: torpedoaway/flask-pro-vic
+    branch: main
