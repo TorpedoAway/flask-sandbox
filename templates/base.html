@@ -106,8 +106,8 @@
 			<div id="logo">
 				<table>
 					<tr>
-						{% for link in links %}
-						<th><a href={{ link[0] }}>{{ link[1] }}</a></th>
+						{% for headlink in headlinks %}
+						<th><a href={{ headlink[0] }}>{{ headlink[1] }}</a></th>
                                                  {% endfor %}
 					</tr>
 				</table>
@@ -125,18 +125,17 @@
 		<nav id="nav">
 			<div class="innertube">
                 <img src="https://torpedo-away.nyc3.digitaloceanspaces.com/Images/Sisyphus.jpg" alt="Sisyphus" style="width:150px;height:150px;">
-				<ul>
-					<li><a href="#">Virtual Machine</a></li>
-					<li><a href="#">Virtual Disks</a></li>
-				</ul>
-				<h1>Storage</h1>
-				<ul>
-					<li><a href="#">ANFS Volume</a></li>
-					<li><a href="#">S3 Bucket</a></li>
-					<li><a href="#">EFS Filesystem</a></li>
-					<li><a href="#">SGW SMB Share</a></li>
-					<li><a href="#">SGW NFS Share</a></li>
-				</ul>
+
+				{% for headname,navigationlinks in navlinks.items() %}
+				   <h1>{{ headname }}</h1>
+				   <ul>
+					{% for navlink in navigationlinks %}
+					    <li><a href={{ navlink[0] }}>{{ navlink[1] }}</a>
+					{% endfor %}
+				    </ul>
+				{% endfor %}
+				
+			
                 
 			</div>
 		</nav>	
