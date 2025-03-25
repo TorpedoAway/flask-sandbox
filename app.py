@@ -4,12 +4,12 @@ from flask import render_template
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/now")
 def hello_world():
     return render_template("index.html")
 
 
-@app.route("/tempate-creator")
+@app.route("/")
 def CreateTemplate():
     headlinks = list()
     headlinks.append(("https://www.google.com","Google"))
