@@ -126,7 +126,14 @@
 			<div class="innertube">
                 <img src="https://torpedo-away.nyc3.digitaloceanspaces.com/Images/Sisyphus.jpg" alt="Sisyphus" style="width:150px;height:150px;">
 
-				{% navlinks.items %}
+				{% for headname,navigationlinks in navlinks.items() %}
+				   <h1>{{ headname }}</h1>
+				   <ul>
+					{% for navlink in navigationlinks %}
+					    <li><a href={{ navlink[0] }}>{{ navlink[1] }}</a>
+					{% endfor %}
+				    </ul>
+				{% endfor %}
 
 			</div>
 		</nav>	
