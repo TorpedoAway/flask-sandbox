@@ -2,5 +2,5 @@ name: sample-flask
 services:
 - name: web
   github:
-    repo: torpedoaway/flask-pro-vic
+    repo: torpedoaway/flask-sandbox
     branch: main
