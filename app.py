@@ -20,4 +20,4 @@ def CreateTemplate():
     navlinks['Storage'] = list()
     navlinks['Storage'].append(("/App/anfs_vol","ANFS Volume"))
     navlinks['Compute'].append(("/App/tf_vm","Virtual Machine"))
-    return render_template("gen.html", headlinks=headlinks)
+    return render_template("gen.html", headlinks=headlinks, navlinks=navlinks)
