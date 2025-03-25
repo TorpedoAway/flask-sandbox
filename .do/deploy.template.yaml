@@ -1,7 +1,7 @@
 spec:
-  name: flask-dev
+  name: flask-sandbox
   services:
   - name: web
     git:
       branch: main
-      repo_clone_url: https://github.com/TorpedoAway/flask-pro-vic.git
+      repo_clone_url: https://github.com/TorpedoAway/flask-sandbox.git
