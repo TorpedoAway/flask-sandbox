@@ -95,12 +95,9 @@
 			<div id="logo">
 				<table>
 					<tr>
-						<th>link1</th>
-						<th>link2</th>
-						<th>link3</th>
-						<th>link4</th>
-						<th>link5</th>
-						<th>link6</th>
+						{% for link in links %}
+						<th><a href={{ link[0] }}>{{ link[1] }}</a></th>
+                                                 {% endfor %}
 					</tr>
 				</table>
 			</div>
