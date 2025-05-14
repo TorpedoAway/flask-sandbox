@@ -1,5 +1,24 @@
 import requests
 
+import argparse
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Parse command-line arguments")
+    
+    # Define command-line options
+    parser.add_argument("--name", type=str, help="User's name")
+    parser.add_argument("--age", type=int, help="User's age")
+    parser.add_argument("--verbose", action="store_true", help="Enable verbose mode")
+
+    args = parser.parse_args()
+    
+    # Convert parsed arguments into a dictionary
+    return vars(args)
+
+if __name__ == "__main__":
+    args_dict = parse_arguments()
+    print(args_dict)
+
 # Azure API details
 subscription_id = "your-subscription-id"
 resource_group = "example-resource-group"
