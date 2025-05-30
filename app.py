@@ -5,10 +5,6 @@ import random
 app = Flask(__name__)
 
 
-@app.route("/now")
-def hello_world():
-    return render_template("index.html")
-
 headlinks = list()
 headlinks.append(("https://www.google.com","Google"))
 headlinks.append(("https://www.digitalocean.com","Digital Ocean"))
@@ -17,7 +13,12 @@ navlinks = dict()
 navlinks['Compute'] = list()
 navlinks['Compute'].append(("https://gemini.google.com/","Gemini AI"))
 
-https://gemini.google.com/
+
+@app.route("/now")
+def hello_world():
+    return render_template("index.html")
+
+
 @app.route("/")
 def CreateTemplate():
 
