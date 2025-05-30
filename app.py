@@ -107,3 +107,4 @@ def get_random_quote(file_path):
             return random.choice(quotes) if quotes else "No quotes found."
     except FileNotFoundError:
         return "File not found."
+## end ##
