@@ -94,11 +94,11 @@ def fortune():
     # Get a random quote
     fortune_cookie = get_random_quote(quotes)
     file_path = "quotes.txt"
-    fortune = get_random_quote(file_path)
+    fortune_cookie = get_quote_from_file(file_path)
     return render_template("gen.html", headlinks=headlinks, navlinks=navlinks, fortune=fortune_cookie)
 
 
-def get_random_quote(file_path):
+def get_quote_from_file(file_path):
     """Reads a text file of quotations delimited by '%' and returns a random quote."""
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
