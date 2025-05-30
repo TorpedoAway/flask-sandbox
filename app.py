@@ -94,4 +94,4 @@ def fortune():
     # Get a random quote
     fortune_cookie = get_random_quote(quotes)
 
-     return render_template("gen.html", headlinks=headlinks, navlinks=navlinks, fortune=fortune_cookie)
+    return render_template("gen.html", headlinks=headlinks, navlinks=navlinks, fortune=fortune_cookie)
